@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="http://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/slate/bootstrap.min.css">
+<body>
+    <section class="game">
+        <div class="score">
+            <div class="playerscore">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="cpuscore">
+                <h2>Cpu</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <h1>Guess your opponent</h1>
+            <button>Start</button>
+            <h2 class="texto">
+                Un piedra papel o tijera utilizando la tematica de juegos de pelea.
+                En este caso consisten de 4 elementos: LP(light punch),
+                MP(medium punch), HP(heavy punch) y BLOCK(block).
+                LP es un golpe rapido pero debil, ideal para golpear primero.
+                MP es un golpe medio ni muy rapido ni muy lento, una opción sin tanto riesgo.
+                HP es un golpe fuerte, lento pero muy poderoso.
+                BLOCK es simplemente bloquear, una opcion normalmente segura pero peligrosa si el oponente elige bien.
+                <span>BLOCK > - LP - > MP, HP</span>
+                <span>BLOCK , LP > - MP - > HP</span>
+                <span>LP, MP > - HP - > BLOCK</span>
+                <span>HP > - BLOCK - > LP, MP</span>
+            </h2>
+        </div>
+        <div class="match fadeOut">
+            <h2 class="winner">Choose an Option</h2>
+            <div class="inputbutton">
+                <img class="player-input" src="./assets/lp.png" alt="">
+                <img class="cpu-input" src="./assets/lp.png" alt="">
+            </div>
+            <div class="inputs">
+                <button class="lp">lp</button>
+                <button class="mp">mp</button>
+                <button class="hp">hp</button>
+                <button class="block">block</button>
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre de Usuario</th>
+                    <th scope="col">Puntuacion</th>
+                  </tr>
+                </thead>
+                <tbody id="scoreboard">
+                </tbody>
+            </table>
+        <div class="restartbutton fadeOut">
+                <button class="restart">Restart</button>
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
